@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HousingLocation } from '../housing-location';
 @Component({
   selector: 'app-housing-location',
   standalone: true,
@@ -9,5 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./housing-location.component.css']
 })
 export class HousingLocationComponent {
+
+  @Input() housingLocation!:HousingLocation; //! is a non-null assertion operator. the value of this property wont be null or undefined
 
 }
